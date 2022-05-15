@@ -35,9 +35,17 @@ section {
 .memSlider {
     max-width: 100%;
     margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    
 }
 
 .slider {
+    max-height:70%;
+    height: 100%;
     max-width: 80%;
     margin: 0 auto;
     display: flex;
@@ -51,6 +59,7 @@ section {
 
 .smem {
     min-width: 100%;
+    height: auto;
     display: flex;
     justify-content: center;
     transition: 0.5s;
@@ -71,6 +80,14 @@ section {
 .mem4 {
     transform: translateX(-200%);
 }
+img{
+    width: auto;
+    height: auto;
+   max-width: 100%;
+   max-height: 100%;
+   display: inline-block;
+ 
+}
 
 
 .sign {
@@ -79,6 +96,7 @@ section {
     overflow: hidden;
     font-size: 1.8rem;
     color: bisque;
+   margin-top: 1.5rem;
 
 }
 
@@ -100,16 +118,17 @@ section {
 
 .pmem {
     min-width: 100%;
-    transition: 0.5s;
+    transition: 0.4s;
    
 }
 
 
 
 .buttons {
-    margin-right: 1em;
+    min-width: 12rem;
     display: flex;
     gap: 1em;
+    margin-top: 1.5rem;
 }
 
 .radio {
@@ -181,4 +200,28 @@ section {
 }
 .button4:checked ~ .sign > .sign4 {
     transform: translateX(-300%);
+}
+
+@media (max-width: 500px) {
+    .slider {
+        max-height:70%;
+        height: 100%;
+        max-width: 100%;
+        border: solid 0.2em black;
+        margin: 0 auto;
+    } 
+
+    .memSlider {
+        
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-left: 0;
+        padding-right: 0;
+        
+    }
+
 }
