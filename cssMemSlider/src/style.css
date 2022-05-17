@@ -223,5 +223,8 @@ img{
         padding-right: 0;
         
     }
+    .sign{
+        order: 3;
+    }
 
 }
