@@ -1,0 +1,230 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+html {
+    max-width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: rgba(2, 187, 113, 0.727);
+}
+
+section {
+    max-width: 100%;
+    overflow: hidden;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+}
+
+.wraper {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: o auto;
+}
+
+.name {
+    color: ghostwhite;
+}
+
+.memSlider {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    
+}
+
+.slider {
+    max-height:70%;
+    height: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    overflow: hidden;
+    margin: 0 auto;
+    background-color: darkgray;
+    border: solid 1em black;
+  
+
+}
+
+.smem {
+    min-width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+.mem1 {
+    transform: translateX(100%);
+}
+
+.mem2 {
+    transform: translateX(0%);
+}
+
+.mem3 {
+    transform: translateX(-100%);
+}
+
+.mem4 {
+    transform: translateX(-200%);
+}
+img{
+    width: auto;
+    height: auto;
+   max-width: 100%;
+   max-height: 100%;
+   display: inline-block;
+ 
+}
+
+
+.sign {
+
+    display: flex;
+    overflow: hidden;
+    font-size: 1.8rem;
+    color: bisque;
+   margin-top: 1.5rem;
+
+}
+
+.sign1 {
+    transform: translateX(100%);
+}
+
+.sign2 {
+    transform: translateX(0%);
+}
+
+.sign3 {
+    transform: translateX(-100%);
+}
+
+.sign4 {
+    transform: translateX(-200%);
+}
+
+.pmem {
+    min-width: 100%;
+    transition: 0.4s;
+   
+}
+
+
+
+.buttons {
+    min-width: 12rem;
+    display: flex;
+    gap: 1em;
+    margin-top: 1.5rem;
+}
+
+.radio {
+    width: 0;
+    height: 0;
+
+    visibility: hidden;
+}
+
+.label {
+    width: 2em;
+    height: 2em;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+.label span {
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    border: solid 0.1em black;
+    background-color: white;
+    transition: 0.3s;
+
+}
+
+.label:hover span {
+    background-color: brown;
+
+    border: solid 0.1em white;
+}
+
+.button1:checked~.buttons .label1 span,
+.button2:checked~.buttons .label2 span,
+.button3:checked~.buttons .label3 span,
+.button4:checked~.buttons .label4 span {
+    background-color: blue;
+    border: solid 0.1em white;
+}
+
+.radio:checked+.label:hover span {
+    background-color: blue;
+    border: solid 0.1em rgb(215, 215, 10);
+}
+
+.button1:checked ~ .slider > .mem1 {
+    transform: translateX(0%);
+}
+.button2:checked ~ .slider > .mem2 {
+    transform: translateX(-100%);
+}
+.button3:checked ~ .slider > .mem3 {
+    transform: translateX(-200%);
+}
+.button4:checked ~ .slider > .mem4 {
+    transform: translateX(-300%);
+}
+
+.button1:checked ~ .sign > .sign1 {
+    transform: translateX(0%);
+}
+.button2:checked ~ .sign > .sign2 {
+    transform: translateX(-100%);
+}
+.button3:checked ~ .sign > .sign3 {
+    transform: translateX(-200%);
+}
+.button4:checked ~ .sign > .sign4 {
+    transform: translateX(-300%);
+}
+
+@media (max-width: 500px) {
+    .slider {
+        max-height:70%;
+        height: 100%;
+        max-width: 100%;
+        border: solid 0.2em black;
+        margin: 0 auto;
+    } 
+
+    .memSlider {
+        
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-left: 0;
+        padding-right: 0;
+        
+    }
+    .sign{
+        order: 3;
+    }
+
+}
